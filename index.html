@@ -27,11 +27,66 @@
             <div class="main col-md-5 offset-7">
                 <div class="view-one">
                     <h2>It's okay to eat a whole pizza by yourself.</h2>
-                    <input type="button" value="ORDER ONLINE" class="order">
+                    <input type="button" value="ORDER ONLINE" class="button">
                 </div>
                 <div class="view-two">
-                    <form action="">
+                    <form id="form" name="form" onsubmit="">
+                        <legend>Place your order here:
+                            <hr>
+                        </legend>
+                        <label for="pizza-name">Select your pizza</label>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="pizza-name" value="veggie" checked>
+                                VEGETERIAN
+                                </label>
+                        </div>
+                        <label for="size">Select size</label>
+                        <div class="radio">
+                            <label>
+                              <input type="radio" name="size" value="large" checked>
+                              Large --- Ksh. 1,000
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                              <input type="radio" name="size" value="medium">
+                              Medium --- Ksh. 800
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                              <input type="radio" name="size" value="small">
+                              Small --- Ksh. 550
+                            </label>
+                        </div>
 
+                        <label for="crust">Select your crust</label>
+                        <input type="number" id="date" name="date" min="1" max="31" required placeholder="Example: 21 ">
+
+                        <label for="toppings">Select preferred toppings, if any</label>
+                        <input type="number" id="date" name="date" min="1" max="31" required placeholder="Example: 21 ">
+
+                        <input type="submit" value="ORDER" class="button">
+                    </form>
+                </div>
+                <div class="view-three">
+                    <form id="form" name="form" onsubmit="">
+                        <legend>Do you wish to have your order delivered?
+                            <hr>
+                        </legend>
+                        <div class="radio">
+                            <label>
+                              <input type="radio" name="delivery" value="yes" checked>
+                              YES
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                              <input type="radio" name="delivery" value="no">
+                              NO
+                            </label>
+                        </div>
                     </form>
                 </div>
             </div>
