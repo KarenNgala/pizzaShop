@@ -38,6 +38,7 @@ body {
     padding: 14px 16px;
     text-decoration: none;
     font-size: larger;
+    font-weight: 700;
 }
 
 .nav ul li a:hover {
@@ -64,4 +65,12 @@ body {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+}
+
+.order:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.view-two {
+    display: ;
 }
