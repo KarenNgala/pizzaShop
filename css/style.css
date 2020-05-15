@@ -81,10 +81,11 @@ body {
 
 .view-three {
     display: none;
-    padding-top: 120px;
+    /* padding-top: 80px; */
 }
 
 input[type=checkbox],
+input[type=text],
 select {
     width: 100%;
     padding: 8px 12px;
@@ -95,8 +96,7 @@ select {
     box-sizing: border-box;
 }
 
-.checkbox,
-.radio {
+.checkbox {
     display: inline-block;
     padding-right: 15px;
     padding-bottom: 10px;

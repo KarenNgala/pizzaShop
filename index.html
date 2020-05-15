@@ -34,7 +34,7 @@
                         <legend>Place your order here:
                         </legend>
                         <label for="toppings">Select your pizza</label>
-                        <select id="pizza" name="pizza">
+                        <select id="pizza" name="pizza" required>
                             <option value="veggie">VEGETERIAN</option>
                             <option value="periperi">PERI-PERI CHICKEN</option>
                             <option value="mushroom">CHICKEN & MUSHROOM</option>
@@ -82,24 +82,31 @@
                     </form>
                 </div>
                 <div class="view-three">
+                    <div class="order-total">
+                        <p></p>
+                    </div>
                     <form class="form" name="form2">
-                        <div class="order-total">
-                            <p></p>
-                        </div>
                         <legend>Do you wish to have your order delivered?
                         </legend>
-                        <div class="radio">
-                            <label>
-                              <input type="radio" name="delivery" value="yes" checked>
-                              YES
-                            </label>
+                        <label for="full-name">Full name</label>
+                        <input type="text" class="" id="">
+
+                        <div id="address">
+
+                            <div class="">
+                                <label for="street">Street</label>
+                                <input type="text" class="">
+                            </div>
+                            <div class="">
+                                <label for="city">City</label>
+                                <input type="text" class="">
+                            </div>
+                            <div class="">
+                                <label for="county">County</label>
+                                <input type="text" class="">
+                            </div>
                         </div>
-                        <div class="radio">
-                            <label>
-                              <input type="radio" name="delivery" value="no">
-                              NO
-                            </label>
-                        </div>
+                        <input type="submit" value="CHECKOUT" class="button" id="continue">
                     </form>
                 </div>
             </div>
