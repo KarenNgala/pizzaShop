@@ -4,7 +4,8 @@ $(document).ready(function() {
         $(".view-two").show();
         $(".view-one").hide();
 
-        $("#continue").click(function() {
+        $("#continue").click(function(event) {
+            event.preventDefault();
             $(".view-three").show();
             $(".view-two").hide();
         });
