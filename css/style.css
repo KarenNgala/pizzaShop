@@ -72,7 +72,13 @@ body {
     background-color: rgba(255, 255, 255, 0.8);
 }
 
-.view-two {}
+.view-two {
+    display: none;
+}
+
+.view-three {
+    display: none;
+}
 
 input[type=checkbox],
 select {
