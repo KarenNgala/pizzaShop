@@ -47,6 +47,9 @@ body {
 
 .main {
     color: white;
+}
+
+.view-one {
     padding-top: 120px;
 }
 
@@ -83,8 +86,8 @@ body {
 input[type=checkbox],
 select {
     width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
+    padding: 8px 12px;
+    margin: 5px 0;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -99,7 +102,7 @@ select {
 }
 
 .form {
-    border-radius: 5px;
+    border-radius: 15px;
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.5);
 }
