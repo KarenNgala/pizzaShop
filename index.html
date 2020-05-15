@@ -30,101 +30,35 @@
                     <input type="button" value="ORDER ONLINE" class="button">
                 </div>
                 <div class="view-two">
-                    <form id="form" name="form" onsubmit="">
+                    <form class="form" name="form" onsubmit="">
                         <legend>Place your order here:
                             <hr>
                         </legend>
-                        <label for="pizza-name">Select your pizza</label>
-                        <div class="radio">
-                            <label>
-                              <input type="radio" name="pizza-name" value="veggie" checked>
-                              VEGETERIAN
-                            </label>
-                        </div>
-                        <div class="radio">
-                            <label>
-                              <input type="radio" name="pizza-name" value="steak" checked>
-                              BBQ STEAK
-                            </label>
-                        </div>
-                        <div class="radio">
-                            <label>
-                              <input type="radio" name="pizza-name" value="chick-shroom" checked>
-                              CHICKEN & MUSHROOM
-                            </label>
-                        </div>
-                        <div class="radio">
-                            <label>
-                              <input type="radio" name="pizza-name" value="hawaiian" checked>
-                              HAWAIIAN
-                            </label>
-                        </div>
-                        <div class="radio">
-                            <label>
-                              <input type="radio" name="pizza-name" value="pepperoni" checked>
-                              PEPPERONI
-                            </label>
-                        </div>
-                        <div class="radio">
-                            <label>
-                              <input type="radio" name="pizza-name" value="boerewors" checked>
-                              SPICY BOEREWORS
-                            </label>
-                        </div>
-                        <div class="radio">
-                            <label>
-                              <input type="radio" name="pizza-name" value="tikka" checked>
-                              VEG. TIKKA
-                            </label>
-                        </div>
-                        <div class="radio">
-                            <label>
-                              <input type="radio" name="pizza-name" value="periperi" checked>
-                              PERI-PERI CHICKEN
-                            </label>
-                        </div>
+                        <label for="toppings">Select your pizza</label>
+                        <select id="pizza" name="pizza">
+                            <option value="veggie">VEGETERIAN</option>
+                            <option value="periperi">PERI-PERI CHICKEN</option>
+                            <option value="mushroom">CHICKEN & MUSHROOM</option>
+                            <option value="hawaiian">HAWAIIAN</option>
+                            <option value="steak">BBQ STEAK</option>
+                            <option value="pig">BOEREWORS</option>
+                        </select>
 
-                        <label for="size">Select size</label>
-                        <div class="radio">
-                            <label>
-                              <input type="radio" name="size" value="large" checked>
-                              Large --- Ksh. 1,000
-                            </label>
-                        </div>
-                        <div class="radio">
-                            <label>
-                              <input type="radio" name="size" value="medium">
-                              Medium --- Ksh. 800
-                            </label>
-                        </div>
-                        <div class="radio">
-                            <label>
-                              <input type="radio" name="size" value="small">
-                              Small --- Ksh. 550
-                            </label>
-                        </div>
+                        <label for="toppings">Select a size</label>
+                        <select id="size" name="size">
+                            <option value="large">LARGE ---- Ksh.1,000</option>
+                            <option value="medium">MEDIUM ---- Ksh.800</option>
+                            <option value="small">SMALL ---- Ksh.550</option>
+                        </select>
 
-                        <label for="crust">Select your crust</label>
-                        <div class="radio">
-                            <label>
-                              <input type="radio" name="crust" value="crispy">
-                              CRISPY
-                            </label>
-                        </div>
-                        <div class="radio">
-                            <label>
-                              <input type="radio" name="crust" value="stuffed">
-                              STUFFED
-                            </label>
-                        </div>
-                        <div class="radio">
-                            <label>
-                              <input type="radio" name="crust" value="gluten">
-                              GLUTEN-FREE
-                            </label>
-                        </div>
+                        <label for="toppings">Select a crust</label>
+                        <select id="crust" name="crust">
+                            <option value="crispy">CRISPY</option>
+                            <option value="stuffed">STUFFED (cheese pockets)</option>
+                            <option value="gluten">GLUTEN-FREE</option>
+                        </select>
 
-                        <label for="toppings">Select your extra toppings</label>
+                        <label for="toppings">Select your extra toppings</label><br>
                         <div class="checkbox">
                             <input type="checkbox" value="sausage" name="toppings">
                             <label for="Sausage">SAUSAGE</label>
@@ -140,13 +74,19 @@
                         <div class="checkbox">
                             <input type="checkbox" value="bacon" name="toppings">
                             <label for="Sausage">BACON</label>
-                        </div>
+                        </div><br>
 
-                        <input type="submit" value="ORDER" class="button">
+                        <div class="buttons">
+                            <input type="submit" value="ORDER" class="button">
+                            <input type="submit" value="ADD PIZZA" class="button">
+                        </div>
                     </form>
                 </div>
                 <div class="view-three">
-                    <form id="form" name="form" onsubmit="">
+                    <form class="form" name="form" onsubmit="">
+                        <div class="order-total">
+
+                        </div>
                         <legend>Do you wish to have your order delivered?
                             <hr>
                         </legend>

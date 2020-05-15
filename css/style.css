@@ -61,6 +61,7 @@ body {
     border: none;
     color: black;
     padding: 15px 32px;
+    padding-right: 30px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -71,19 +72,28 @@ body {
     background-color: rgba(255, 255, 255, 0.8);
 }
 
-.view-two {
-    display: ;
+.view-two {}
+
+input[type=checkbox],
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
+.checkbox,
 .radio {
-    display: block;
-    /* position: relative; */
-    padding-left: 35px;
-    margin-bottom: 12px;
-    cursor: pointer;
-    font-size: 15px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+    display: inline-block;
+    padding-right: 15px;
+    padding-bottom: 10px;
+}
+
+.form {
+    border-radius: 5px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
 }
