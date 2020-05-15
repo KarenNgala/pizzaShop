@@ -81,6 +81,7 @@ body {
 
 .view-three {
     display: none;
+    padding-top: 120px;
 }
 
 input[type=checkbox],
