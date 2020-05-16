@@ -10,11 +10,20 @@ $(document).ready(function() {
             $(".view-two").hide();
         });
     });
-    $("form#new-contact").submit(function(event) {
+    $("form#form1").submit(function(event) {
         event.preventDefault();
 
         //get values from form
-        var inputtedFirstName = $("input#new-first-name").val();
-        var inputtedLastName = $("input#new-last-name").val();
+        $("select#pizza").on('change', function() {
+            var pizzaName = $(this).val();
+        });
+        $("select#size").on('change', function() {
+            var pizzaSize = $(this).val();
+        });
+        $("select#crust").on('change', function() {
+            var pizzaCrust = $(this).val();
+        });
+        var pizzaTopping = $("input[type='checkbox']").val();
+
     });
 });

@@ -30,11 +30,12 @@
                     <input type="button" value="ORDER ONLINE" class="button" id="order-online">
                 </div>
                 <div class="view-two">
-                    <form class="form" name="form" onsubmit="">
+                    <form class="form" name="form1" onsubmit="">
                         <legend>Place your order here:
                         </legend>
                         <label for="toppings">Select your pizza</label>
                         <select id="pizza" name="pizza" required>
+                            <option disabled selected>Pizza type</option>
                             <option value="veggie">VEGETERIAN</option>
                             <option value="periperi">PERI-PERI CHICKEN</option>
                             <option value="mushroom">CHICKEN & MUSHROOM</option>
@@ -45,6 +46,7 @@
 
                         <label for="toppings">Select a size</label>
                         <select id="size" name="size">
+                            <option disabled selected>Pizza size</option>
                             <option value="large">LARGE ---- Ksh.1,000</option>
                             <option value="medium">MEDIUM ---- Ksh.800</option>
                             <option value="small">SMALL ---- Ksh.550</option>
@@ -52,6 +54,7 @@
 
                         <label for="toppings">Select a crust</label>
                         <select id="crust" name="crust">
+                            <option disabled selected>Pizza crust</option>
                             <option value="crispy">CRISPY</option>
                             <option value="stuffed">STUFFED (cheese pockets)</option>
                             <option value="gluten">GLUTEN-FREE</option>
@@ -83,13 +86,13 @@
                 </div>
                 <div class="view-three">
                     <div class="order-total">
-                        <p></p>
+
                     </div>
                     <form class="form" name="form2">
                         <legend>Have your order delivered:
                         </legend>
                         <label for="full-name">Full name</label>
-                        <input type="text" class="" id="">
+                        <input type="text" class="" id="" placeholder="Full name here">
 
                         <div id="address">
 
