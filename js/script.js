@@ -10,4 +10,11 @@ $(document).ready(function() {
             $(".view-two").hide();
         });
     });
+    $("form#new-contact").submit(function(event) {
+        event.preventDefault();
+
+        //get values from form
+        var inputtedFirstName = $("input#new-first-name").val();
+        var inputtedLastName = $("input#new-last-name").val();
+    });
 });
