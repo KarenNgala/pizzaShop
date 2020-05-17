@@ -1,36 +1,46 @@
 //business interface logic
-
-var price = function() {
-    var pricePizza, priceCrust, priceTopping;
-    var priceDelivery = 100;
-    if (pizzaSize == "large") {
-        pricePizza = 1000;
-    } else if (pizzaSize == "medium") {
-        pricePizza = 800;
-    } else {
-        pricePizza = 550;
-    };
-
-    if (pizzaCrust == "crispy") {
-        priceCrust = 100;
-    } else if (pizzaCrust == "stuffed") {
-        priceCrust = 200;
-    } else {
-        priceCrust = 150;
-    };
-
-    if (pizzaTopping = 'cheese') {
-        priceTopping = 80;
-    } else if (pizzaTopping = 'sausage') {
-        priceTopping = 50;
-    } else if (pizzaTopping = 'mushroom') {
-        priceTopping = 100;
-    } else if (pizzaTopping = 'bacon') {
-        priceTopping = 70;
-    };
-    var orderTotal = pricePizza + priceCrust + priceTopping;
-    return priceDelivery && orderTotal;
+function Pizza(pizza, size, crust, toppings) {
+    this.pizza = pizza;
+    this.size = size;
+    this.crust = crust;
+    this.toppings = toppings;
 }
+
+//calculating price of pizza
+var pricePizza, priceCrust;
+var priceDelivery = 100;
+if (pizzaSize == "large") {
+    pricePizza = 1000;
+} else if (pizzaSize == "medium") {
+    pricePizza = 800;
+} else if (pizzaSize == 'small') {
+    pricePizza = 550;
+} else {
+    pricePizza = 0;
+};
+
+if (pizzaCrust == "crispy") {
+    priceCrust = 100;
+} else if (pizzaCrust == "stuffed") {
+    priceCrust = 200;
+} else if (pizzaCrust == 'gluten') {
+    priceCrust = 150;
+} else {
+    priceCrust = 0;
+};
+
+function priceTopping() {
+    var input = document.getElementsByName("toppings");
+    var total = 0;
+    for (var i = 0; i < input.length; i++) {
+        if (input[i].checked) {
+            total += parseFloat(input[i].value);
+        }
+    }
+    return total;
+}
+
+
 
 // user interface logic
 $(document).ready(function() {
@@ -44,22 +54,22 @@ $(document).ready(function() {
             $(".view-two").hide();
         });
     });
+    //continue button
     $("form#form1").submit(function(event) {
         event.preventDefault();
 
         //get values from form
-        $("select#pizza").on('change', function() {
-            var pizzaName = $(this).val();
+        let pizzaName = $("#pizza option:selected").val();
+        let pizzaSize = $("#size option:selected").val();
+        let pizzaCrust = $("#crust option:selected").val();
+        var pizzaTopping = [];
+        $.each($("input[name='toppings']:checked"), function() {
+            pizzaTopping.push($(this).text());
         });
-        $("select#size").on('change', function() {
-            var pizzaSize = $(this).val();
-        });
-        $("select#crust").on('change', function() {
-            var pizzaCrust = $(this).val();
-        });
-        var pizzaTopping = $("input[type='checkbox']").val();
-        var order = price(pizzaCrust, pizzaTopping, pizzaSize);
-        alert('Your order total is: ' + order);
+        console.log(pizzaTopping.join(", "));
+
+        var orderPrice = price(pizzaSize, pizzaCrust, pizzaTopping);
+        alert('Your order total is: ' + orderPrice);
 
     });
 });
