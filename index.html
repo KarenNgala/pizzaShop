@@ -30,34 +30,35 @@
                     <input type="button" value="ORDER ONLINE" class="button" id="order-online">
                 </div>
                 <div class="view-two">
-                    <form class="form" name="form1">
+                    <form class="form" name="form1" action="">
                         <legend>Place your order here:
                         </legend>
+
                         <label for="pizza">Select your pizza</label>
                         <select id="pizza" name="pizza" required>
-                            <option disabled selected>Pizza type</option>
-                            <option value="veggie">VEGETERIAN</option>
-                            <option value="periperi">PERI-PERI CHICKEN</option>
-                            <option value="mushroom">CHICKEN & MUSHROOM</option>
-                            <option value="hawaiian">HAWAIIAN</option>
-                            <option value="steak">BBQ STEAK</option>
-                            <option value="pig">BOEREWORS</option>
+                                <option disabled selected>Pizza type</option>
+                                <option value="veggie">VEGETERIAN</option>
+                                <option value="periperi">PERI-PERI CHICKEN</option>
+                                <option value="mushroom">CHICKEN & MUSHROOM</option>
+                                <option value="hawaiian">HAWAIIAN</option>
+                                <option value="steak">BBQ STEAK</option>
+                                <option value="pig">BOEREWORS</option>
                         </select>
 
                         <label for="size">Select a size</label>
                         <select id="size" name="size">
-                            <option disabled selected>Pizza size</option>
-                            <option value="large">LARGE --- Ksh.1,000</option>
-                            <option value="medium">MEDIUM --- Ksh.800</option>
-                            <option value="small">SMALL --- Ksh.550</option>
+                                <option disabled selected>Pizza size</option>
+                                <option value="large">LARGE --- Ksh.1,000</option>
+                                <option value="medium">MEDIUM --- Ksh.800</option>
+                                <option value="small">SMALL --- Ksh.550</option>
                         </select>
 
                         <label for="crust">Select a crust</label>
                         <select id="crust" name="crust">
-                            <option disabled selected>Pizza crust</option>
-                            <option value="crispy">CRISPY --- Ksh. 100</option>
-                            <option value="stuffed">STUFFED(cheese pockets) --- Ksh.200</option>
-                            <option value="gluten">GLUTEN FREE  --- Ksh.150</option>
+                                <option disabled selected>Pizza crust</option>
+                                <option value="crispy">CRISPY --- Ksh. 100</option>
+                                <option value="stuffed">STUFFED(cheese pockets) --- Ksh.200</option>
+                                <option value="gluten">GLUTEN FREE  --- Ksh.150</option>
                         </select>
 
                         <label for="toppings">Select your extra toppings</label><br>
@@ -78,58 +79,9 @@
                             <label for="bacon">BACON --- Ksh.100</label>
                         </div><br>
 
-                        <div class="buttons">
-                            <input type="submit" value="CONTINUE" class="button" id="continue">
-                        </div>
-                    </form>
-                </div>
-                <div class="order-total">
-                    <h2>Confirm your order:</h2>
-                    <table class="confirm-order">
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Size</th>
-                                <th>Crust</th>
-                                <th>Toppings</th>
-                                <th>Total</th>
-                            </tr>
-                        </thead>
-                        <tbody class="current-order">
-                            <tr>
-                                <td id="name"></td>
-                                <td id="size"></td>
-                                <td id="crust"></td>
-                                <td id="toppings"></td>
-                                <td id="total"></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <input type="submit" value="ADD PIZZA" class="button" id="add">
-                </div>
-                <div class="view-three">
-                    <form class="form" name="form2">
-                        <legend>Have your order delivered:
-                        </legend>
-                        <label for="full-name">Full name</label>
-                        <input type="text" class="" id="" placeholder="Full name here">
-
-                        <div id="address">
-
-                            <div class="">
-                                <label for="street">Street</label>
-                                <input type="text" class="">
-                            </div>
-                            <div class="">
-                                <label for="city">City</label>
-                                <input type="text" class="">
-                            </div>
-                            <div class="">
-                                <label for="county">County</label>
-                                <input type="text" class="">
-                            </div>
-                        </div>
-                        <input type="submit" value="CHECKOUT" class="button" id="continue">
+                        <!-- <span class="button" id="add-pizza">Another pizza</span> -->
+                        <input type="submit" value="CONTINUE" class="button" id="continue">
+                        <div class="output"></div>
                     </form>
                 </div>
             </div>
