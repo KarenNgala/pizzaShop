@@ -31,14 +31,29 @@ if (pizzaCrust == "crispy") {
 
 function priceTopping() {
     var input = document.getElementsByName("toppings");
+    var total1 = 0;
     var total = 0;
     for (var i = 0; i < input.length; i++) {
         if (input[i].checked) {
-            total += parseFloat(input[i].value);
+            total1 += parseFloat(input[i].value);
         }
+        if (pizzaSize == 'large') {
+            total = total1 * 3;
+        } else if (pizzaSize == 'medium') {
+            total = total1 * 2;
+        } else if (pizzaSize == 'small') {
+            total = total1;
+        };
     }
     return total;
 }
+
+//validate 
+if (pricePizza == '0' | priceCrust == '0') {
+    alert("Please select a pizza and crust");
+}
+
+var pizzaTotal = pricePizza + priceCrust + priceTopping();
 
 
 
@@ -50,7 +65,7 @@ $(document).ready(function() {
 
         $("#continue").click(function(event) {
             event.preventDefault();
-            $(".view-three").show();
+            $(".order-total").show();
             $(".view-two").hide();
         });
     });
@@ -67,9 +82,6 @@ $(document).ready(function() {
             pizzaTopping.push($(this).text());
         });
         console.log(pizzaTopping.join(", "));
-
-        var orderPrice = price(pizzaSize, pizzaCrust, pizzaTopping);
-        alert('Your order total is: ' + orderPrice);
 
     });
 });

@@ -80,14 +80,34 @@
 
                         <div class="buttons">
                             <input type="submit" value="CONTINUE" class="button" id="continue">
-                            <!-- <input type="submit" value="ADD PIZZA" class="button" id="add"> -->
                         </div>
                     </form>
                 </div>
+                <div class="order-total">
+                    <h2>Confirm your order:</h2>
+                    <table class="confirm-order">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Size</th>
+                                <th>Crust</th>
+                                <th>Toppings</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody class="current-order">
+                            <tr>
+                                <td id="name"></td>
+                                <td id="size"></td>
+                                <td id="crust"></td>
+                                <td id="toppings"></td>
+                                <td id="total"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <input type="submit" value="ADD PIZZA" class="button" id="add">
+                </div>
                 <div class="view-three">
-                    <div class="order-total">
-
-                    </div>
                     <form class="form" name="form2">
                         <legend>Have your order delivered:
                         </legend>
