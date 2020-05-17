@@ -76,11 +76,11 @@ body {
 }
 
 .view-two {
-    display: none;
+    /* display: none; */
 }
 
 .view-three {
-    display: none;
+    /* display: none; */
 }
 
 input[type=checkbox],
