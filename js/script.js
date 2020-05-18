@@ -1,13 +1,6 @@
 //business interface logic
 var priceSize, priceCrust, priceTopping;
 
-function Pizza(pizza, size, crust, toppings) {
-    this.pizza = pizza;
-    this.size = size;
-    this.crust = crust;
-    this.toppings = toppings;
-}
-
 //calculate pizza price
 var price = function(pizzaSize, pizzaCrust, pizzaTopping) {
     switch (pizzaSize) {
@@ -76,12 +69,13 @@ $(document).ready(function() {
 
         var total = price(pizzaSize, pizzaCrust, pizzaTopping);
         $(".current-order").append('<tr><td id="name">' + pizzaName + '</td><td id="size">' + pizzaSize + '</td><td id="crust">' + pizzaCrust + '</td><td id="toppings">' + pizzaTopping + '</td><td id="total">' + total);
-
-        var order = new Pizza(pizzaName, pizzaSize, pizzaCrust, pizzaTopping)
-        console.log(order); //test
-        (" ");
-        $(".current-order").text(Pizza);
-        console.log(newOrder);
     })
 
+    $("#delivery").click(function() {
+        $(".view-four").show();
+    })
+
+    $("#pick-up").click(function() {
+        alert("Dear customer, your order will be ready for pickup in 1 hour")
+    })
 })
