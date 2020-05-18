@@ -75,11 +75,11 @@ $(document).ready(function() {
         });
 
         var total = price(pizzaSize, pizzaCrust, pizzaTopping);
-        alert("Your order is: " + pizzaName + ", " + pizzaCrust + ", " + pizzaSize + ", " + pizzaTopping + ", " + total);
+        $(".current-order").append('<tr><td id="name">' + pizzaName + '</td><td id="size">' + pizzaSize + '</td><td id="crust">' + pizzaCrust + '</td><td id="toppings">' + pizzaTopping + '</td><td id="total">' + total);
 
         var order = new Pizza(pizzaName, pizzaSize, pizzaCrust, pizzaTopping)
         console.log(order); //test
-        $(".current-order").text(" ");
+        (" ");
         $(".current-order").text(Pizza);
         console.log(newOrder);
     })
