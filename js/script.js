@@ -98,8 +98,7 @@ $(document).ready(function() {
     })
 
     $("#pick-up").click(function() {
-        $(".notice p").append("Dear customer, your order will be ready for pickup in 1 hour");
-        $(".notice").css('background-color', 'green');
+        alert("Dear customer, your order will be ready for pickup in 1 hour");
     })
 
 })
