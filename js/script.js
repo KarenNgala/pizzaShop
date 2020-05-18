@@ -82,22 +82,31 @@ $(document).ready(function() {
         $(".current-order").append('<tr><td id="name">' + order.pizza + '</td><td id="size">' + order.size + '</td><td id="crust">' + order.crust + '</td><td id="toppings">' + order.toppings + '</td><td id="total">' + total);
 
 
-        $("#checkout").click(function(event) {
-            event.preventDefault();
-
+        $("#checkout").click(function() {
             //form data
             var clientName = $("#full-name").val();
             var clientNumber = $("#phone-number").val();
             var clientLocation = $("#location").val();
 
+
             alert("Dear " + clientName + " your order will be delivered to " + clientLocation + " within the hour! Your order total is: " +
                 grandTotal);
             //refresh page
-            $(".view-three").hide();
-            $(".view-four").hide();
-            $(".view-one").show();
-            // document.getElementById("form1").reset();
+            // location.reload();
         })
+    })
+
+
+    $("#add").click(function(event) {
+        event.preventDefault();
+
+        //Add an extra order
+        $(".view-three").hide();
+        $(".view-four").hide();
+        $(".view-two").show();
+        document.getElementById("form1").reset();
+
+
     })
 
     $("#delivery").click(function() {
@@ -106,5 +115,9 @@ $(document).ready(function() {
 
     $("#pick-up").click(function() {
         alert("Dear customer, your order will be ready for pickup in 1 hour");
+
+        //refresh page
+        location.reload();
     })
+
 })
