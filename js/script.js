@@ -36,11 +36,11 @@ var price = function(pizzaSize, pizzaCrust, pizzaTopping) {
     }
 
     if (pizzaSize == 'large') {
-        priceTopping = 150;
+        priceTopping = pizzaTopping.length * 150;
     } else if (pizzaSize == 'medium') {
-        priceTopping = 100;
+        priceTopping = pizzaTopping.length * 100;
     } else if (pizzaSize == 'small') {
-        priceTopping = 50;
+        priceTopping = pizzaTopping.length * 50;
     }
 
     var pizzaTotal = priceSize + priceCrust + priceTopping;
@@ -76,6 +76,8 @@ $(document).ready(function() {
     })
 
     $("#pick-up").click(function() {
-        alert("Dear customer, your order will be ready for pickup in 1 hour")
+        $(".notice p").append("Dear customer, your order will be ready for pickup in 1 hour");
+        $(".notice").css('background-color', 'green');
     })
+
 })
