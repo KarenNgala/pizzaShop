@@ -84,6 +84,7 @@ h2 {
 input[type=checkbox],
 input[type=text],
 input[type=tel],
+input[type=number],
 select {
     width: 100%;
     padding: 8px 12px;
