@@ -22,6 +22,7 @@ var price = function(pizzaSize, pizzaCrust, pizzaTopping) {
             break;
         case "small":
             priceSize = 550;
+            break;
         default:
             alert("Please select a pizza size");
     };
@@ -38,6 +39,7 @@ var price = function(pizzaSize, pizzaCrust, pizzaTopping) {
             break;
         case "gluten":
             priceCrust = 150;
+            break;
         default:
             alert("Please choose a crust");
     };
@@ -90,6 +92,11 @@ $(document).ready(function() {
 
             alert("Dear " + clientName + " your order will be delivered to " + clientLocation + " within the hour! Your order total is: " +
                 grandTotal);
+            //refresh page
+            $(".view-three").hide();
+            $(".view-four").hide();
+            $(".view-one").show();
+            // document.getElementById("form1").reset();
         })
     })
 
@@ -100,5 +107,4 @@ $(document).ready(function() {
     $("#pick-up").click(function() {
         alert("Dear customer, your order will be ready for pickup in 1 hour");
     })
-
 })
