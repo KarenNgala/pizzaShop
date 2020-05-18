@@ -1,4 +1,10 @@
 //business interface logic
+function Pizza(pizza, size, crust, toppings) {
+    this.pizza = pizza;
+    this.size = size;
+    this.crust = crust;
+    this.toppings = toppings;
+}
 var priceSize, priceCrust, priceTopping;
 
 //calculate pizza price
@@ -68,11 +74,14 @@ $(document).ready(function() {
         });
 
         var total = price(pizzaSize, pizzaCrust, pizzaTopping);
-        $(".current-order").append('<tr><td id="name">' + pizzaName + '</td><td id="size">' + pizzaSize + '</td><td id="crust">' + pizzaCrust + '</td><td id="toppings">' + pizzaTopping + '</td><td id="total">' + total);
+        var order = new Pizza(pizzaName, pizzaSize, pizzaCrust, pizzaTopping)
+        $(".current-order").append('<tr><td id="name">' + order.pizza + '</td><td id="size">' + order.size + '</td><td id="crust">' + order.crust + '</td><td id="toppings">' + order.toppings + '</td><td id="total">' + total);
     })
 
     $("#delivery").click(function() {
         $(".view-four").show();
+
+        //form data
     })
 
     $("#pick-up").click(function() {
