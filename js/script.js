@@ -56,6 +56,7 @@ var price = function(pizzaSize, pizzaCrust, pizzaTopping) {
     return pizzaTotal;
 }
 
+
 // user interface logic
 $(document).ready(function() {
     $("#order-online").click(function() {
@@ -63,6 +64,7 @@ $(document).ready(function() {
         $(".view-one").hide();
     })
 
+    //Continue button
     $("#continue").click(function(event) {
         event.preventDefault();
         $(".view-three").show();
@@ -81,7 +83,15 @@ $(document).ready(function() {
         var order = new Pizza(pizzaName, pizzaSize, pizzaCrust, pizzaTopping)
         $(".current-order").append('<tr><td id="name">' + order.pizza + '</td><td id="size">' + order.size + '</td><td id="crust">' + order.crust + '</td><td id="toppings">' + order.toppings + '</td><td id="total">' + total);
 
+        //Pickup button
+        $("#pick-up").click(function() {
+            alert("Dear customer, your order will be ready for pickup in 1 hour. Your order total is: " + total);
 
+            //refresh page
+            location.reload();
+        })
+
+        //Checkout button
         $("#checkout").click(function() {
             //form data
             var clientName = $("#full-name").val();
@@ -91,12 +101,11 @@ $(document).ready(function() {
 
             alert("Dear " + clientName + " your order will be delivered to " + clientLocation + " within the hour! Your order total is: " +
                 grandTotal);
-            //refresh page
-            // location.reload();
         })
     })
 
 
+    //Add another pizza
     $("#add").click(function(event) {
         event.preventDefault();
 
@@ -105,19 +114,10 @@ $(document).ready(function() {
         $(".view-four").hide();
         $(".view-two").show();
         document.getElementById("form1").reset();
-
-
     })
 
+    //Delivery button
     $("#delivery").click(function() {
         $(".view-four").slideDown();
     })
-
-    $("#pick-up").click(function() {
-        alert("Dear customer, your order will be ready for pickup in 1 hour");
-
-        //refresh page
-        location.reload();
-    })
-
 })
