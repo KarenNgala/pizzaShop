@@ -24,6 +24,7 @@ var price = function(pizzaSize, pizzaCrust, pizzaTopping) {
             priceSize = 550;
             break;
         default:
+            location.reload();
             alert("Please select a pizza size");
     };
 
@@ -41,6 +42,7 @@ var price = function(pizzaSize, pizzaCrust, pizzaTopping) {
             priceCrust = 150;
             break;
         default:
+            location.reload();
             alert("Please choose a crust");
     };
 
@@ -98,9 +100,12 @@ $(document).ready(function() {
             var clientNumber = $("#phone-number").val();
             var clientLocation = $("#location").val();
 
-
-            alert("Dear " + clientName + " your order will be delivered to " + clientLocation + " within the hour! Your order total is: " +
-                grandTotal);
+            if (clientName === "" || clientNumber === "" || clientLocation === "") {
+                alert("Please fill in the delivery form. All fields are required")
+            } else {
+                alert("Dear " + clientName + " your order will be delivered to " + clientLocation + " within the hour! Your order total is: " +
+                    grandTotal + " Our rider will call you on arrival");
+            }
         })
     })
 
@@ -118,6 +123,7 @@ $(document).ready(function() {
 
     //Delivery button
     $("#delivery").click(function() {
+        $(".table-buttons").hide();
         $(".view-four").slideDown();
     })
 })

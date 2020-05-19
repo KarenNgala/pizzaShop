@@ -18,7 +18,7 @@
 | ---------------------|:--------------------:| ----------------:|
 | Choose size of pizza | small, medium or large | selected input (eg: large) |
 | Choose a crust type  | crispy, stuffed or gluten-free |  selected input (eg: stuffed) |
-| Choose pizza toppings| select desired toppings |    $1 |
+| Choose pizza toppings| select desired toppings |    Depending on the pizza size(eg: medium = Ksh.100 for toppings) |
 | See total charge or add pizza | click on desired button | display total charge or prompt user to add pizzas |
 | Have pizza delivered | click on delivery button | prompt user to enter delivery info & display cost |
 | Checkout | Click on checkout button | Display total cost |
